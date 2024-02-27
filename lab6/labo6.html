@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="labo6.css">
+</head>
+<body>
+    <section>
+        <h1> Validar contraseña </h1>
+        <p> contraseña </p>
+        <input type="password" id="contra"> 
+        <p id="demo"></p> <br/>
+        <p> verificar contraseña </p>
+        <input type="password" id="vericontra" > <br/><br/><br/>
+        <button type="submit" onclick="validar()"> validar </button>
+    </section>
+    <article>
+        <button type="submit" onclick="mostrarpreguntas()"> preguntas  </button>
+    </article>
+    <section id="preguntas" hidden>
+        <p> 
+            ¿Por qué es una buena práctica usar JavaScript para checar que sean
+            válidos los inputs de las formas antes de enviar los datos al servidor?
+            proporciona retroalimentacion inmediata al usuario y ahorra ancho de banda
+        </p>
+        <p>
+            ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?
+            desactivar JavaScript en el navegador
+        </p>
+        <p>
+            Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces 
+            ¿por qué la primera pregunta dice que es una buena práctica?
+            porque mejora la experiencia de usuario, pero no debe considerarse como la única capa de seguridad, 
+            siempre se debe realizar una validación adicional en el lado del servidor
+        </p>
+    </section>
+    <script src="labo6.js"> </script>
+</body>
+</html>

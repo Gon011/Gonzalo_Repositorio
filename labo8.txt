@@ -1,0 +1,1 @@
+segunda función, recibí este string y lo escribí en este archivo 

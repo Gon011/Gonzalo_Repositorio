@@ -1,6 +1,6 @@
-const express = require("express")
-const { readFile } = require('fs')
-const app = express()
+const express = require("express");
+const { readFile } = require('fs');
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))

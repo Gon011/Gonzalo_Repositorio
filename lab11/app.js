@@ -12,7 +12,7 @@ app.use("/", rutas);
 
 app.use((requset, response, next) => {
     response.status(404);
-    response.render('404');
+    response.send('404');
   });
 
 app.listen(4000,()=>{console.log("SERVIDOR INICIADO")});

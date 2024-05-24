@@ -12,6 +12,15 @@ section {
 .fuerte {color:rgb(200, 255, 0);}
 .segura {color:rgb(47, 255, 175);}
 
+.h {
+    margin-bottom: 15px;
+}
+
+.h label {
+
+    margin-bottom: 5px;
+}
+
 article {
     text-align: center;
 }

@@ -10,3 +10,4 @@ router.get('/ejercicios', (request, response, next) => {
 })
 
 module.exports = router;
+

@@ -1,1 +1,1 @@
-Tu contraseña es:  y tu verificación es 
+Tu contraseña es: 123abcABC, y tu verificación es: 123abcABC,

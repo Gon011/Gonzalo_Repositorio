@@ -1,5 +1,6 @@
 const contra = document.getElementById("contra");
 const veri = document.getElementById("vericontra");
+const retroa = document.getElementById("demo");
 
 const minusculas = "qwertyuiopasdfghjklñzxcvbnm"
 const mayusculas = "QWERTYUIOPASDFGHJKLÑZXCVBNM"
@@ -35,35 +36,31 @@ function seguridad() {
     return safe;
 }
 
-function validar() {
-    if (contra.value == "" || veri.value == "") {
-        alert("porfavor llene todos los campos");
-    } else if (contra.value != veri.value) {
+function validar(event) {
+    if (seguridad() < 6) {
+        event.preventDefault();
+    }
+    if (contra.value != veri.value) {
         alert("la contraseña no coincide")
     } else if (contra.value.length < 7) {
         alert("la contraseña debe ser más larga");
-    } else if (seguridad() < 7) {
-        alert("la contraseña debe contener mayúsculas, minúsculas, número y caracteres especiales");
+    } else if (seguridad() < 6) {
+        alert("la contraseña debe contener mayúsculas, minúsculas, números y caracteres especiales");
     } else {
-        alert("contraseña validada");
-    }     
+        alert("usuario creado");
+    }
 }
 
 contra.oninput = function retro() {
     if (seguridad() == 0) {
-        document.getElementById("demo").innerHTML = ""
+        retroa.innerHTML = ""
     } else if (seguridad() < 3) {
-        document.getElementById("demo").innerHTML = "<div class='debil'> la contraseña es débil </div>";
+        retroa.innerHTML = "<div class='debil'> la contraseña es débil </div>";
     } else if (seguridad() < 5) {
-        document.getElementById("demo").innerHTML = "<div class='regular'> la contraseña es regular </div>";
+        retroa.innerHTML = "<div class='regular'> la contraseña es regular </div>";
     } else if (seguridad() < 6) {
-        document.getElementById("demo").innerHTML = "<div class='fuerte'> la contraseña es fuerte </div>";
+        retroa.innerHTML = "<div class='fuerte'> la contraseña es fuerte </div>";
     } else if (seguridad() < 7) {
-        document.getElementById("demo").innerHTML = "<div class='segura'> la contraseña es segura </div>";
+        retroa.innerHTML = "<div class='segura'> la contraseña es segura </div>";
     }
-}
-
-function mostrarpreguntas() {
-    p = document.getElementById("preguntas");
-    p.hidden = !p.hidden;
 }

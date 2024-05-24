@@ -41,7 +41,7 @@ function validar() {
         alert("la contraseña no coincide")
     } else if (contra.value.length < 7) {
         alert("la contraseña debe ser más larga");
-    } else if (seguridad() < 7) {
+    } else if (seguridad() < 6) {
         alert("la contraseña debe contener mayúsculas, minúsculas, número y caracteres especiales");
     } else {
         alert("contraseña validada");

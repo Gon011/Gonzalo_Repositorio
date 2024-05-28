@@ -1,0 +1,23 @@
+{
+  "name": "lab14",
+  "version": "1.0.0",
+  "description": "laboratorio 14",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gon011/Gonzalo_Repositorio.git"
+  },
+  "keywords": [
+    "TC2005B"
+  ],
+  "author": "Gonzalo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gon011/Gonzalo_Repositorio/issues"
+  },
+  "homepage": "https://github.com/Gon011/Gonzalo_Repositorio#readme"
+}

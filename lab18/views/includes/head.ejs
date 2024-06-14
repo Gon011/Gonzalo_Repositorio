@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/detallesProducto.css">
+</head>
+<body>
+    <header class="">
+        <div class="navbar navFijo">
+            <h2 class="subtitle is-4">VentaMini</h2>
+            <div class="men">
+                <button class="btn" onclick="location.href='/productos'">Productos</button>
+                <button class="btn" onclick="location.href='/compras'">Compras</button>
+            </div>
+            <div class="menu">
+                <p><%= nombre %></p>
+                <button class="btn-logout" onclick="location.href='/cierra'">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    <section>
+        <aside class="sidebar close">
+            <br><br><br>
+            <div class="menu-bar mt-4">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="#">
+                                <span class="text nav-text">Filtros</span>
+                                <div>
+                                    <i class="fa fa-filter fa-lg icon"></i>
+                                </div>
+                            </a>
+                            <ul class="dropdown">
+                                <li class="dropdown-item">
+                                    <a href="#">Categoria</a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="#">Musica</a></li>
+                                        <li><a href="#">Peliculas</a></li>
+                                        <li><a href="#">Libros</a></li>
+                                        <li><a href="#">Revistas</a></li>
+                                        <li><a href="#">Ropa</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="#">Precio</a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="#">$0 - $25</a></li>
+                                        <li><a href="#">$25 - $50</a></li>
+                                        <li><a href="#">$50 - $75</a></li>
+                                        <li><a href="#">$75 - $100</a></li>
+                                        <li><a href="#">$100 - $100+</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="/graficos">
+                                <span class="text nav-text">Gráficos</span>
+                                <div>
+                                    <i class="fa fa-chart-bar fa-lg icon"></i>
+                                </div>
+                            </a>
+                        </li>
+                <!-- Log out, al final de la página -->
+                <div class="bottom-content">
+                    <li class="nav-link">
+                        <a href="/cierra">
+                            <span class="text nav-text">Log out</span>
+                            <i class="fas fa-sign-out-alt fa-lg icon"></i>
+                        </a>
+                    </li> 
+                </div> 
+            </div>
+        </aside>
+    </section>
+        

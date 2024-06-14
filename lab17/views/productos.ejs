@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h2 class="subtitle is-4">VentaMini</h2>
+            <div class="men">
+                <button class="btns">Productos</button>
+                <button class="btn" onclick="location.href='compras'">Compras</button>
+            </div>
+            <div class="menu">
+                <p><%= nombre %></p>
+                <button class="btn-logout" onclick="location.href='cierra'">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="columns">
+            <% for (i in productos) { %>
+                <% if (i % 3 == 0){ %>
+                        </div>
+                        <div class="columns">
+                <% } %>      
+            
+                    <div class="column is-one-third is-half-mobile">
+                        <div class="card has-background-info-light">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="<%= productos[i].imagen %>">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4" id="name_<%= i %>"><%= productos[i].nombre %></p>
+                                        <p class="subtitle is-4">$<span id="price_<%= i %>"><%= productos[i].precio %></span></p>
+                                    </div>
+                                   
+                                </div>
+                                <div class="content">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <%  } %>
+    </main>    
+</body>
+</html>

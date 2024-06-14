@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h2 class="subtitle is-4">VentaMini</h2>
+            <div class="men">
+                <button class="btn" onclick="location.href='productos'">Productos</button>
+                <button class="btns">Compras</button>
+            </div>
+            <div class="menu">
+                <p><%= nombre %></p>
+                <button class="btn-logout" onclick="location.href='cierra'">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <p>no se han hecho compras</p>
+    </main>    
+</body>
+</html>

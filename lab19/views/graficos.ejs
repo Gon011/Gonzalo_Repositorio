@@ -1,0 +1,56 @@
+<%- include('includes/head') %>
+
+<div class="container">
+    <h1 class="title">Gráficos de Ventas</h1>
+
+    <div class="selector">
+        <button class="chart-button" data-chart="ingresosPorDia">Ingresos por Día</button>
+        <button class="chart-button" data-chart="ventasPorProducto">Ventas por Producto</button>
+        <button class="chart-button" data-chart="ventasPorCategoria">Ventas por Categoría</button>
+        <button class="chart-button" data-chart="ventasPorDia">Ventas por Día</button>
+        <button class="chart-button" data-chart="comprasPorEstado">Compras por Estado</button>
+    </div>
+
+    <div class="chart-container" id="ingresosPorDia">
+        <h2>Ingresos Totales por Día</h2>
+        <canvas id="ingresosPorDiaChart"></canvas>
+    </div>
+
+    <div class="chart-container" id="ventasPorProducto">
+        <h2>Cantidad de unidades vendidas por producto</h2>
+        <canvas id="ventasPorProductoChart"></canvas>
+    </div>
+
+    <div class="chart-container" id="ventasPorCategoria">
+        <h2>Cantidad de unidades vendidas por categoría</h2>
+        <canvas id="ventasPorCategoriaChart"></canvas>
+    </div>
+
+    <div class="chart-container" id="ventasPorDia">
+        <h2>Cantidad de unidades vendidas por día</h2>
+        <canvas id="ventasPorDiaChart"></canvas>
+    </div>
+
+    <div class="chart-container" id="comprasPorEstado">
+        <h2>Número de compras clasificadas según su estado</h2>
+        <canvas id="comprasPorEstadoChart"></canvas>
+    </div>
+
+
+</div>
+
+<script>
+    const ingresosPorDiaData = <%- JSON.stringify(ingresosPorDia) %>;
+    const ventasPorProductoData = <%- JSON.stringify(ventasPorProducto) %>;
+    const ventasPorCategoriaData = <%- JSON.stringify(ventasPorCategoria) %>;
+    const ventasPorDiaData = <%- JSON.stringify(ventasPorDia) %>;
+    const comprasPorEstadoData = <%- JSON.stringify(comprasPorEstado) %>;
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/graficos.js"></script>
+
+
+<%- include('includes/foot') %>
+
